@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# StockLens
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+StockLens is an advanced option chain analysis tool designed for retail investors, providing clear and focused stock market insights through detailed option chain data visualization and analysis.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Real-time option chain data visualization
+- Put-Call Ratio (PCR) analysis
+- Market sentiment indicators
+- Detailed metrics for informed decision making
+- Support for multiple indices (NIFTY, BANKNIFTY, FINNIFTY, etc.)
+- User-friendly interface for beginners
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository
+```bash
+git clone https://github.com/AnchitJain08/StockLens.git
+```
 
-### `npm run build`
+2. Install dependencies
+```bash
+cd StockLens
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the development server
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application will open in your default browser at `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Select an index or stock from the dropdown menu
+2. View detailed option chain data and analysis
+3. Monitor PCR values and market sentiment
+4. Track important metrics for informed trading decisions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contributing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Learn More
+## Disclaimer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+StockLens is designed for educational and informational purposes only. The information provided should not be considered as financial advice. Always conduct your own research and consult with a qualified financial advisor before making investment decisions.
