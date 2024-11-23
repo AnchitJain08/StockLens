@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/StockLens/static/css/main.f855e6bc.css",
+    "main.js": "/StockLens/static/js/main.bdc367a2.js",
+    "static/js/453.fa799326.chunk.js": "/StockLens/static/js/453.fa799326.chunk.js",
+    "index.html": "/StockLens/index.html",
+    "main.f855e6bc.css.map": "/StockLens/static/css/main.f855e6bc.css.map",
+    "main.bdc367a2.js.map": "/StockLens/static/js/main.bdc367a2.js.map",
+    "453.fa799326.chunk.js.map": "/StockLens/static/js/453.fa799326.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.bdc367a2.js"
+  ]
+}
