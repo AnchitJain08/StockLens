@@ -1,13 +1,22 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+const path = require('path');
 const app = express();
 
-// Enable CORS for all origins in development
-app.use(cors({
-    origin: true, // Allow all origins
-    credentials: true
-}));
+// Enable CORS for development
+const isDev = process.env.NODE_ENV !== 'production';
+if (isDev) {
+    app.use(cors({
+        origin: true,
+        credentials: true
+    }));
+}
+
+// Serve static files in production
+if (!isDev) {
+    app.use(express.static(path.join(__dirname, 'build')));
+}
 
 // Headers required by NSE
 const headers = {
@@ -51,13 +60,20 @@ app.get('/api/option-chain/:type/:symbol', async (req, res) => {
 
         res.json(response.data);
     } catch (error) {
-        console.error('Error fetching data:', error);
-        res.status(500).json({ error: 'Failed to fetch data from NSE' });
+        console.error('Error fetching option chain:', error);
+        res.status(500).json({ error: 'Failed to fetch option chain data' });
     }
 });
 
-const PORT = process.env.PORT || 4000;
+// Serve index.html for all other routes in production
+if (!isDev) {
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    });
+}
+
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Proxy server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
     console.log(`Server is accessible at http://localhost:${PORT} and on your local network`);
 });
